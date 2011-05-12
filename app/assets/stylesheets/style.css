@@ -1,0 +1,456 @@
+/*clearfix*/
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+* html .clearfix              { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix  { zoom: 1; } /* IE7 */
+/*end clearfix*/
+
+#splash {
+width: 100%;
+height: 300px;
+background: url(/images/olnarthas.jpg) top center;
+	border-bottom: 1px solid #aaa;
+}
+
+.home #splash {
+ /*height: 350px;*/
+}
+
+body {
+background: #111;
+color: #ddd;
+font-family: Lucida Grande;
+font-size: 14px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+font-family: Trebuchet MS;
+}
+
+center {
+}
+
+a {
+	color: #d00;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+#main {
+	border: 2px solid #aaa;
+	width: 1001px;
+	text-align: left;
+	padding: 0;
+	margin: 0;
+  background: #222;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#sidebar {
+	float:right;
+	width: 300px;
+	font-size: 12px;
+}
+
+#sidebar .links a {
+	display: block;
+}
+
+#sidebar h2 {
+	font-variant: small-caps;
+	background: #611;
+	border-bottom: 1px solid #aaa;
+	border-top: 1px solid #aaa;
+	margin: 0;
+	padding-left: 15px;
+	padding-bottom: 7px;
+	padding-top: 7px;
+}
+
+#sidebar .progress {
+	text-align: center;
+	padding: 5px 25px;
+}
+#sidebar .active_poll {
+	padding:20px 20px 10px 20px;
+}
+
+#sidebar .active_poll ul {
+	list-style-type:none;
+}
+#sidebar .active_poll .question {
+	font-weight:bold;
+}
+.button_right {
+	margin:0px;
+	float:right;
+	clear:none;
+}
+.poll_table {
+	padding:10px;
+	padding-bottom: 30px;
+}
+.poll_table table {
+	width:100%;
+}
+.poll_table .active {
+	width:20%;
+}
+.poll_table .question {
+	width:60%;
+}
+.poll_table .expire {
+	width:25%;
+}
+poll_table th {
+	text-align:left;
+}
+#header h1 {
+  margin: 0;
+  padding-bottom: 0px;
+}
+#splash h2 {
+	margin: 15px;
+  margin-top: 0;
+}
+
+#main-content {
+  width: 700px;
+  border-right: 1px solid #aaa;
+  margin: 0;
+  padding-bottom: 5px;
+}
+
+#main-content h2 {
+	background: #611;
+	border-bottom: 1px solid #aaa;
+	border-top: 1px solid #aaa;
+	margin: 0;
+	padding-left: 15px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	font-variant: small-caps;
+}
+
+h3 {
+	font-size: 100%
+	font-weight: bold;
+	color: #ccc;	
+	margin: 15px;
+	margin-bottom: 0;
+	font-variant: small-caps;
+}
+
+p {
+	font-size: 12px;
+	margin: 15px;
+	padding-left: 10px;	
+	padding-right: 10px;
+}
+
+ul.links {
+	list-style-type: none;
+	padding-left: 0;
+	margin-left: 15px;
+}
+
+.character-info span.links a {
+	color: #999;
+	margin-right: 2em;
+}
+
+img.achievement {
+margin: 20px 10px 20px 15px;
+}
+
+a.achievement {
+	color: #fc0;
+	font-weight: normal;
+}
+
+a.epic {
+	color: #A335EE;
+	font-weight: normal;
+}
+
+#header {
+color: white;
+text-align: center;
+padding: 10px;
+border-top: 1px solid #aaa;
+}
+
+span.small {
+	font-size: 80%;
+}
+
+#main-content .login form {
+	padding: 20px;
+	width: 500px;
+	text-align: right;
+}
+
+#main-content .login form label {
+	display:block;
+	margin: 5px;
+}
+
+#sidebar .login form {
+	width: 250px;
+	padding: 5px;
+	text-align: right;
+}
+
+.error { color: red; }
+
+.usercard img {
+	float: left;
+	margin-right: 10px;
+}
+
+.usercard .character-info {
+	float: left;
+	font-size: 12px;
+
+}
+
+#sidebar .character-info {
+	width: 180px;
+}
+
+.usercard .character-info span {
+	margin-top: 4px;
+}
+
+.usercard {
+	margin: 2px;
+	background: #292929;
+	padding: 3px;
+}
+
+.usercard .name strong {
+	color: white;
+	font-size: 13px;
+}
+
+.main .usercard {
+	background: #373737;
+	margin-left: 2px;
+}
+
+.character-list .alt-tab {
+	background: #393939;
+	margin-left: 66px;
+	text-align: center;
+	cursor: pointer;
+	display: none;
+}
+
+.alts .usercard {
+	margin-left: 66px;
+
+}
+
+.alts .usercard img {
+	width: 32px;
+}
+
+#characters.main .tabs a.main,
+#characters.eighty .tabs a.eighty,
+#characters.seventy .tabs a.seventy,
+#characters.all .tabs a.all {
+	background: #444;
+}
+
+#characters .alts .usercard {
+	display: none;
+}
+#characters.eighty .alts .usercard.eighty,
+#characters.seventy .alts .usercard.seventy,
+#characters.all .alts .usercard {
+	display: block;
+}
+
+.character-list {
+	margin-bottom: 5px;
+}
+
+form.add-alt {
+	font-size: 12px;
+	padding: 3px;
+	text-align: right;
+}
+
+.tabs {
+
+}
+
+.tabs a {
+	color: white;
+	padding: 10px;
+	margin: 2px 0 0 2px;
+	float: left;
+	background: #333;
+}
+
+.tabs a.selected {
+	background: #444;
+}
+
+.tabs a:hover {
+	background: #555 !important;
+	text-decoration: none;
+}
+
+.usercard a.be-imba {
+	display: none;
+}
+
+.usercard.eighty a.be-imba {
+	display: inline;
+}
+
+.messages p {
+	font-size: 16px;
+	float: left;
+	margin: 0;
+	width: 550px;
+}
+
+.messages .name {
+	font-weight: bold;
+}
+
+.messages > div {
+	clear: left;
+	background: #282828;
+	padding: 5px;
+	margin: 0px;
+	margin-bottom: 1px;
+}
+
+.messages img.avatar {
+	float: left;
+}
+
+.messages img.avatar, .usercard img {
+	width: 64px;
+	-webkit-box-shadow: black 1px 1px 15px -3px;
+	-moz-box-shadow: black 1px 1px 5px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+}
+
+.messages .timestamp {
+	font-size: 10px;
+	color: #aaa;
+	display: block;
+	margin-top: 5px;
+}
+
+.compose {
+}
+
+textarea {
+	font-family: Lucida Grande;
+	border: 1px solid #777;
+	
+}
+
+.compose textarea {
+	font-size: 16px;
+	display: block;
+	width: 600px;
+	height: 4em;
+	margin: 5px 50px;
+}
+
+.compose .send {
+	float: right;
+	margin-right: 50px;
+}
+
+.msgs {
+	font-size: 112x;
+	margin: 0;
+	padding: 0;
+}
+.msgs span {
+	display: block;
+	padding: 4px;
+	border-top: 1px solid #555;
+}
+.user-content a {
+	color: white;
+	text-decoration: underline;
+	font-weight: normal;
+}
+.msgs a.quick-reply {
+	color: #777;
+}
+.msgs span:hover .quick-reply:after {
+	content: " reply";
+}
+.msgs form {
+	margin: 0;
+	padding: 0;
+}
+.msgs input {
+	width: 296px;
+	font-size: 12px;
+	border: 1px solid #555;
+	margin: 2px;
+	padding: 2px;
+}
+.pagination .numbers {float:right;padding:3px; 10px;}
+.pagination .page_list {float:left;padding:3px; 10px;}
+.pagination .page_list .selected {color:#DDD}
+.pagination .page_list .selected:hover {text-decoration:none; color:#DDD}
+form.create-poll {
+	width: 600px;
+	padding: 10px 50px;
+	text-align: right;
+}
+
+form.create-poll label input {
+	width: 400px;
+	margin-left: 20px;
+}
+
+form.create-poll input,
+form.create-poll textarea {
+	font-size: 14px;
+}
+
+form.create-poll label {
+	display: block;
+	margin-bottom: 10px;
+}
+
+form.create-poll textarea {
+	width: 400px;
+}
+
+.poll_result { width:250px;  margin: 3px 0px; border: 1px solid #ccc; overflow:visible; white-space: nowrap;}
+.percent { padding: 5px 0px;}
+.poll_results { padding:20px; }
+.poll_results .first { background: #611 }
+.poll_results .second { background: #811 }
+.poll_results .third { background: #a11 }
+
+.spacer {
+	margin:0px;
+	padding:0px;
+	clear:both;
+}

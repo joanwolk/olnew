@@ -1,0 +1,52 @@
+.blog-compose {
+	margin: 10px;
+	padding: 10px;
+	background: rgba(255,255,255,0.2);
+	border-radius: 10px;
+}
+
+.blog-compose .title {
+	font-family: Trebuchet MS;
+	font-variant: small-caps;
+	font-size: 120%;
+	font-weight: bold;
+	width: 100%;
+	margin: 0;
+	margin-bottom: 5px;
+}
+
+.blog-compose .body {
+	width: 100%;
+	height: 30em;
+	font-family: Menlo, Monaco, "Courier New", fixed;
+	margin: 0;
+}
+
+.blog-post {
+	background: rgba(255,255,255,0.05);
+	padding: 0px;
+	margin: 10px;
+	border-radius: 10px;
+}
+
+.blog-post h3 {
+	text-shadow: 2px 2px 1px rgba(0,0,0,0.5);
+	background: rgba(255,255,255,0.1);
+	margin: 0;
+	padding: 10px;
+	border-radius: 10px 10px 0 0;
+}
+
+.blog-post img.achievement {
+	margin: 10px 4px 10px 4px;
+}
+
+.blog-post .foot {
+	font-size: 80%;
+	padding: 10px;
+}
+
+.blog-pagination {
+	font-size: 80%;
+	margin: 10px;
+}

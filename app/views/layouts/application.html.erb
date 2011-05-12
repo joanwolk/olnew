@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <%= stylesheet_link_tag "application" %>
+  <%= javascript_include_tag "http://static.wowhead.com/widgets/power.js" %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+  <div id="main">
+
+    <%= render 'layouts/splash' %>
+    <%= render 'layouts/header' %>
+    
+    <div id="sidebar">
+      <%= render 'layouts/navigation' %>
+      <%= render 'layouts/schedule' %>
+      <%= render 'layouts/recruiting' %>
+      <%= render 'layouts/progress' %>
+    </div>
+
+    <div id="main-content" class="clearfix">
+      <%= yield %>
+      <%= debug(params) if Rails.env.development? %>
+    </div>
+
+  </div>
+</body>
+</html>
