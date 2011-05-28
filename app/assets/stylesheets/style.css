@@ -116,6 +116,50 @@ a:hover {
 poll_table th {
 	text-align:left;
 }
+
+div.field, div.actions {
+  margin: 15px;
+	padding-left: 10px;	
+	padding-right: 10px;
+}
+
+div.field_with_errors {
+  display: inline-block;
+  color: #f00;
+}
+
+#error_explanation {
+  width: 400px;
+  border: 2px solid #f00;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-left: 25px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 16px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#error_explanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#error_explanation ul li {
+  color: #333;
+  font-size: 12px;
+  list-style: square;
+}
+
 #header h1 {
   margin: 0;
   padding-bottom: 0px;
