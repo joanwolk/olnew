@@ -11,10 +11,14 @@ class User < ActiveRecord::Base
   validates :password, :length => { :minimum => 6 }
 
 
-  def self.authenticate_cookie(id, password_digest)
+  def salt
+    @salt ||= BCrypt::Password.new(password_digest).salt
+  end
+
+  def self.authenticate_with_salt(id, salt)
     user = find_by_id(id)
     return nil if user.nil?
-    return user if user.password_digest == password_digest
+    return user if user.salt == salt
   end
 
 end

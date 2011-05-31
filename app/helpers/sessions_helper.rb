@@ -1,7 +1,7 @@
 module SessionsHelper
 
   def sign_in(user)
-    cookies.permanent.signed[:remember_token] = [user.id, user.password_digest]
+    cookies.permanent.signed[:remember_token] = [user.id, user.salt]
     self.current_user = user
   end
 
@@ -30,7 +30,7 @@ module SessionsHelper
   private
 
     def user_from_remember_token
-      User.authenticate_cookie(*remember_token)
+      User.authenticate_with_salt(*remember_token)
     end
     
     def remember_token
