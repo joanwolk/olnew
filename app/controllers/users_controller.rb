@@ -1,7 +1,11 @@
 class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
-    @title = @user.name
+    if ! @user.name.blank?
+      @title = @user.name
+    else
+      @title = nil
+    end
   end
 
   def new
@@ -18,6 +22,22 @@ class UsersController < ApplicationController
     else
       @title = "Sign up"
       render 'new'
+    end
+  end
+
+  def edit
+    @user = User.find(params[:id])
+    @title = "Edit profile"
+  end
+
+  def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(params[:user])
+      flash[:success] = "Profile updated."
+      redirect_to @user
+    else
+      @title = "Edit profile"
+      render 'edit'
     end
   end
 

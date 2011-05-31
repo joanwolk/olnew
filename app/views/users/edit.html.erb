@@ -1,7 +1,5 @@
-<h2>sign up</h2>
+<h2>edit profile</h2>
 <%= render 'shared/flash_messages' %>
-
-<p>Fields with * are mandatory.</p>
 
 <%= form_for(@user) do |f| %>
   <%= render 'shared/error_messages', :object => f.object %>
@@ -22,6 +20,6 @@
     <%= f.password_field :password_confirmation %>
   </div>
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Update" %>
   </div>
 <% end %>
