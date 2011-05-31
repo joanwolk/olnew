@@ -128,6 +128,11 @@ div.field_with_errors {
   color: #f00;
 }
 
+div.flash {
+  margin-left: 25px;
+  margin-top: 15px;
+}
+
 #error_explanation {
   width: 400px;
   border: 2px solid #f00;

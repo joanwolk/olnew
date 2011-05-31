@@ -11,4 +11,10 @@ class User < ActiveRecord::Base
   validates :password, :length => { :minimum => 6 }
 
 
+  def self.authenticate_cookie(id, password_digest)
+    user = find_by_id(id)
+    return nil if user.nil?
+    return user if user.password_digest == password_digest
+  end
+
 end
