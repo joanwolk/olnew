@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  before_filter :user_signed_in?, :only => [:delete]
+  before_filter :signed_in?, :only => [:delete]
 
 
   def new
@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
       render :new
     else
       sign_in user
-      redirect_to user
+      redirect_back_or user
     end
   end
 

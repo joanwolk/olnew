@@ -1,0 +1,7 @@
+<li>
+  <% if ! user.name.blank? %>
+    <%= link_to user.name, user %>
+  <% else %>
+    <%= link_to user.email, user %>
+  <% end %>
+</li>

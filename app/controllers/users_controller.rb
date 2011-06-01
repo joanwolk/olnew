@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :authenticate, :only => [:edit, :update]
+  before_filter :authenticate, :only => [:index, :edit, :update]
   before_filter :correct_user, :only => [:edit, :update]
 
 
@@ -42,6 +42,11 @@ class UsersController < ApplicationController
       @title = "Edit profile"
       render 'edit'
     end
+  end
+
+  def index
+    @title = "Guild Members"
+    @users = User.all
   end
 
 
