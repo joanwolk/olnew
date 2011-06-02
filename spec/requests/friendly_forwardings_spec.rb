@@ -11,5 +11,18 @@ describe "FriendlyForwardings" do
     # The test follows the redirect again, this time to users/edit.
     response.should render_template('users/edit')
   end
+
+  describe "when signed in" do
+    before(:each) do
+      @user = Factory(:user)
+      integration_sign_in(@user)
+    end
+
+    it "should redirect to root when the signup page is requested" do
+      visit signup_path
+      response.should render_template(root_path)
+    end
+  end
+  
 end
 
