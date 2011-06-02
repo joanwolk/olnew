@@ -6,7 +6,9 @@ gem 'rails', '~> 3.1.0.rc'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-gem 'rake', '0.8.7'
+gem 'rake'
+gem 'kaminari'
+
 
 # Asset template engines
 gem 'sass'
@@ -18,6 +20,7 @@ gem 'jquery-rails'
 
 group :development do
   gem 'rspec-rails', '~> 2.6.1.beta1'
+  gem 'faker'
 end
 
 group :test do

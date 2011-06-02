@@ -1,7 +1,9 @@
 <h2>guild members</h2>
 
+<%= paginate @users %>
+
 <ul class="members">
-  <% @users.each do |user| %>
     <%= render @users %>
-  <% end %>
 </ul>
+
+<%= paginate @users %>

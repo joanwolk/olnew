@@ -46,7 +46,7 @@ class UsersController < ApplicationController
 
   def index
     @title = "Guild Members"
-    @users = User.all
+    @users = User.order(:name).page(params[:page])
   end
 
 
