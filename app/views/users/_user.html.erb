@@ -4,4 +4,14 @@
   <% else %>
     <%= link_to user.email, user %>
   <% end %>
+
+  <% if current_user.admin? %> | 
+    <% if ! user.name.blank? %>
+      <%= link_to "delete", user, :method => :delete, :confirm => "Are you sure?",
+                                  :title => "Delete #{user.name}" %>
+    <% else %>
+      <%= link_to "delete", user, :method => :delete, :confirm => "Are you sure?",
+                                  :title => "Delete #{user.email}" %>
+    <% end %>
+  <% end %>
 </li>
