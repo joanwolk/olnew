@@ -249,6 +249,14 @@ ul.members {
   list-style: none;
 }
 
+nav.pagination {
+  margin-left: 25px;
+}
+
+.pagination span {
+  padding: 0.25em;
+}
+
 /* The .login form does not exist in the Rails site
 #main-content .login form {
 	padding: 20px;
