@@ -1,8 +1,10 @@
 Olnew::Application.routes.draw do
 
+
   resources :users
   resources :pages
   resources :sessions, :only => [:new, :create, :destroy]
+  resources :invitations, :only => [:new, :create]
 
 
   root :to => 'pages#about'

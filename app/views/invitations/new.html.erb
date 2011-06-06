@@ -1,0 +1,13 @@
+<h2>send invitation</h2>
+<%= render 'shared/flash_messages' %>
+
+  <%= form_for @invitation do |f| %>
+  <%= render 'shared/error_messages', :object => f.object %>
+    <div class="field">
+      <%= f.label :recipient_email %><br />
+      <%= f.text_field :recipient_email %>
+    </div>
+    <div class="actions">
+      <%= f.submit "Send invitation" %>
+    </div>
+  <% end %>

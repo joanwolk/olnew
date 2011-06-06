@@ -7,7 +7,11 @@
   <% end %>
   <li><%= link_to "About", about_path %></li>
   <li><%= link_to "Contact", contact_path %></li>
-  <% if signed_in? %>
+  <% if signed_in? && current_user.admin? %>
+    <li><%= link_to "Members", users_path %></li>
+    <li><%= link_to "Invite new users", new_invitation_path %></li>
+    <li><%= link_to "Sign out", signout_path %></li>
+  <% elsif signed_in? %>
     <li><%= link_to "Members", users_path %></li>
     <li><%= link_to "Sign out", signout_path %></li>
   <% else %>
