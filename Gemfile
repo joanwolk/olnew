@@ -6,8 +6,10 @@ gem 'rails', '~> 3.1.0.rc'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-gem 'rake'
+gem 'rake', '0.8.7'
 gem 'kaminari'
+gem 'json'
+gem 'dalli'
 
 
 # Asset template engines
@@ -30,6 +32,7 @@ group :test do
   gem 'rspec'
   gem 'webrat'
   gem 'spork', '~> 0.9.0.rc'
+  gem 'ZenTest', '4.5.0'
   gem 'autotest-standalone'
   gem 'autotest-rails'
   gem 'autotest-growl'
