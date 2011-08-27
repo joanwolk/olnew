@@ -13,8 +13,9 @@ class InvitationsController < ApplicationController
     @invitation = Invitation.new(params[:invitation])
     @invitation.sender = current_user
     if @invitation.save
-        flash[:success] = "Invitation sent."
-        redirect_to new_invitation_path
+      Mailer.invite(@invitation).deliver
+      flash[:success] = "Invitation sent."
+      redirect_to new_invitation_path
     else
       @title = "Invite users"
       render 'new'
