@@ -14,6 +14,7 @@ class InvitationsController < ApplicationController
     @invitation.sender = current_user
     if @invitation.save
       Mailer.invite(@invitation).deliver
+      @invitation.update_attributes(sent_at: Time.now)
       flash[:success] = "Invitation sent."
       redirect_to new_invitation_path
     else
