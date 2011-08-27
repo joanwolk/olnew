@@ -20,6 +20,11 @@ gem 'uglifier'
 gem 'jquery-rails'
 
 
+group :production do
+  gem 'therubyracer-heroku'
+  gem 'pg'
+end
+
 group :development do
   gem 'rspec-rails', '~> 2.6.1.beta1'
   gem 'faker'
