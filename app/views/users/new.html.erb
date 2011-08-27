@@ -4,6 +4,7 @@
 <p>Fields with * are mandatory.</p>
 
 <%= form_for(@user) do |f| %>
+  <%= f.hidden_field :invitation_token %>
   <%= render 'fields', :f => f %>
   <div class="actions">
     <%= f.submit "Sign up" %>

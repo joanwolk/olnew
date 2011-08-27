@@ -13,6 +13,9 @@ class User < ActiveRecord::Base
                     :format =>      { :with => email_regex },
                     :uniqueness =>  { :case_sensitive => false }
   validates :password, :length => { :minimum => 6 }
+  validates :invitation_id, :uniqueness => { :allow_nil => true }
+
+  attr_accessible :name, :email, :password, :password_confirmation, :invitation_id
 
 
   def salt
@@ -23,6 +26,14 @@ class User < ActiveRecord::Base
     user = find_by_id(id)
     return nil if user.nil?
     return user if user.salt == salt
+  end
+
+  def invitation_token
+    invitation.token if invitation
+  end
+
+  def invitation_tokem=(token)
+    self.invitation = Invitation.find_by_token(token)
   end
 
 end
