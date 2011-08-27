@@ -24,4 +24,12 @@ module ApplicationHelper
     end
   end
 
+  def oln_status
+    http = Net::HTTP.new("us.battle.net", 80)
+    guild_status = http.request(Net::HTTP::Get.new("/api/wow/guild/Uldaman/ominous%20latin%20noun"))
+    parsed_stats = JSON.parse(guild_status.body)
+    @oln_level = parsed_stats['level']
+    @oln_points = parsed_stats['achievementPoints']
+  end
+
 end
